@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slidevid/config/app_theme.dart';
+import 'package:slidevid/presentation/screens/discover/discover_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,14 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'SlideVid',
       debugShowCheckedModeBanner: false,
       theme: AppTheme().getTheme(),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('SlideVid'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: const DiscoverScreen(),
     );
   }
 }

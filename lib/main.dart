@@ -12,7 +12,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => DiscoverProvider())],
+      // ..loadNextPage() ES CONOCIDO COMO OPERADOR DE CASCADA
+      providers: [
+        ChangeNotifierProvider(
+            // PONEMOS LAZY EN FALSE PARA QUE CARGUEN AL INSTANTE LOS PROVIDERS Y NO CUANDO
+            // SON LLAMADOS
+            // NO ES OBLIGATORIO PONER EL LAZY FALSE
+            lazy: false,
+            create: (_) => DiscoverProvider()..loadNextPage())
+      ],
       child: MaterialApp(
         title: 'SlideVid',
         debugShowCheckedModeBanner: false,

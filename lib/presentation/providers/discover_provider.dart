@@ -12,7 +12,7 @@ class DiscoverProvider extends ChangeNotifier {
   // SE PUEDE DECIR QUE LA FUNCION LOADNEXTPAGE ES COMO UNA
   // FUNCION 'INIT' PARA CARGAR LOS PRIMEROS VIDEOS
   Future<void> loadNextPage() async {
-    await Future.delayed(const Duration(seconds: 2));
+    //await Future.delayed(const Duration(seconds: 2));
 
     // ESTE MAPA BARRE CADA UNO DE LOS ELEMENTOS DENTRO DE ESTE LISTADO, ESTO NO MUTA EL
     // ARREGLO, SOLO REGRESA UNO NUEVO
